@@ -2,8 +2,8 @@
 const express = require('express');
 const router  = express.Router();
 
-router.get('/music', (req, res) => {
-    res.send('<h1> My list of music </h1>')
+router.get('', (req, res) => {
+    res.render('songs/index.ejs')
 })
 
 module.exports = router;
