@@ -2,6 +2,6 @@
 require('../config/connection');
 
 module.exports = {
-    songs: require('/songs')
+    songs: require('./songs')
     // songs: require('/songs')
 }
