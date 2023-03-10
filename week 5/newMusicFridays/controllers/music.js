@@ -10,7 +10,7 @@ router.get('/', async (req, res, next) => {
     try {
         const mySongs = await songs.find({});
         console.log(mySongs);
-        res.render('index.ejs ')
+        res.render('/index.ejs ')
         const context = {
             songs: mySongs
         }
@@ -26,13 +26,14 @@ router.get('/new', (req, res) => {
     res.render('newEditDeleteAll/edit.ejs')
 }); 
 
-router.post('/abc', async (req, res, next) => {
+// Try catch is -> when you run do the first part, if you can't log an error 
+router.post('/', async (req, res, next) => {
     try {
-        const newSong = song.create(req.body);
-        console.log(newSong);
         console.log(req.body);
-        // const myNewSong = await songs.create(req.body);
-        // console.log(myNewSong);
+        const newSong = await song.create(req.body);
+        console.log(newSong);
+        const myNewSong = await songs.create(req.body);
+        console.log(myNewSong);
         res.redirect('/')
     } catch(error){
         console.log(error);

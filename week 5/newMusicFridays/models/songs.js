@@ -24,7 +24,7 @@ const songSubmitSchema = new mongoose.Schema(
         required: [true, "Please type in the Friday Released"]
     }, 
     songRating: {
-        type: 'number',
+        type: String,
         required: [true, "Please type in the Song's Rating"]
     }, 
 },

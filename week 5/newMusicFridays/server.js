@@ -30,7 +30,7 @@ app.get('/', (req, res) =>{
 app.get('/submit', (req, res) => {
     res.render('submit');
 });
-app.get('/songs', (req, res) => {
+app.get('/songSubmissions', (req, res) => {
     res.render('songList');
 })
 app.get('/*', (req, res) => {

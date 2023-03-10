@@ -3,16 +3,18 @@
 <div id="card">
     <h1> Submit your favorite song!</h1>
     <hr>
-        <form method="POST" action="/songs">
+        <form method="POST" action="./songSubmissions">
             <label for="songName"> Song Name </label>
             <input type="text" name="songName" id="songName" />
             <label for="artistName"> Artist Name </label>
             <input type="text" name="artistName" id="artistName" />
-            <label for="releaseDay"> Release Day </label>
-            <input type="text" name="releaseDay" id="releaseDay" />
-            <label for="rating"> Rating </label>
-            <input type="text" name="rating" id="rating" />
-            
+            <label for="songCategory"> Artist Name </label>
+            <input type="text" name="songCategory" id="songCategory" />
+            <label for="dateAdded"> Release Day </label>
+            <input type="text" name="dateAdded" id="dateAdded" />
+            <label for="songRating"> Rating </label>
+            <input type="text" name="songRating" id="songRating" />
+
             <input type="submit" value="Submit New Music!">
           </form>
 </div> 
