@@ -1,4 +1,5 @@
 // npm init -y -> mkdir controllers models views -> touch .gitignore .env
+//npm i express ejs mongoose dotenv 
 
 // Step 1: Get the server running
 const express =  require('express');
@@ -27,7 +28,7 @@ app.get('/submit', (req, res) => {
     res.render('submit');
 });
 app.get('/songs', (req, res) => {
-    res.render('index');
+    res.render('songList');
 })
 app.get('/*', (req, res) => {
     res.render('error')
