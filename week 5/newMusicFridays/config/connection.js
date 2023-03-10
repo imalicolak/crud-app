@@ -1,3 +1,4 @@
+// Use only to check if MONGO DB is CONNECTED 
 // Mongoose Configuration
 require('dotenv').config();
 

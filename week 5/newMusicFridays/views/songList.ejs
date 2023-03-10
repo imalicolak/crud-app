@@ -3,8 +3,20 @@
    
 <!-- I want my songs to show up after submission here with an edit button for updating -->
     <div id="card">
-        <h1> Song List </h1>
+
+        <h1> Songs Submitted so far </h1>
+
         <hr> 
+            
+        <% for (let i = 0; i < songs.length; i++){ %>
+            <a href="/songList.ejs <%= songs[i]._id %>">
+                <h3> <%= song[i].songName %></h3>
+            </a>
+                <h4> <%= song [i].artistName %></h4>
+                <h5> <%= song[i].songCategory %></h5>
+                <h5> <%= song[i].songRating %></h5>
+                <h5> <%= song[i].dateAdded %></h5>
+            <% } %>
     </div>    
 
         
