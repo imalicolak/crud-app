@@ -33,6 +33,7 @@ const songSubmitSchema = new mongoose.Schema(
     }
 );
 
+// General default name created in Mongo DB
 const songs = mongoose.model('songs', songSubmitSchema);
 
 module.exports = songs;

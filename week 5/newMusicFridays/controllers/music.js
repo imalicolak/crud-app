@@ -22,14 +22,23 @@ router.get('/', async (req, res, next) => {
     }
     
 })
+router.get('/new', (req, res) => {
+    res.render('newEditDeleteAll/edit.ejs')
+}); 
 
-router.post('/', async(req, res, next) => {
+router.post('/abc', async (req, res, next) => {
     try {
-        const myNewSong = await songs.create(req.body);
-        console.log(myNewSong);
+        const newSong = song.create(req.body);
+        console.log(newSong);
+        console.log(req.body);
+        // const myNewSong = await songs.create(req.body);
+        // console.log(myNewSong);
+        res.redirect('/')
     } catch(error){
         console.log(error);
         return next();
     }
 })
+
+
 module.exports = router;

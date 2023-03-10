@@ -17,6 +17,9 @@ app.set('view engine', 'ejs');
 // Connect to CSS & DOM manipulation. Use public folder, don't have to specify it's in public anymore
 app.use(express.static('public'));
 
+// Forms don't come in way I want them to, so I need to parse the information so it works. Now it can be in the Req.body
+app.use(express.urlencoded({extended: false}));
+
 // app.use uses all of imports from music controller & base url is now localhost:4000/musicians when file is read
 app.use('/music', musicController)
 

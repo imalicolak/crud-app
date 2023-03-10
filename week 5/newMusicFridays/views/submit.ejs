@@ -1,22 +1,22 @@
 <%- include ('./partials/header.ejs', {pageName: "Submit a Song" }) %>
 
-<div>
-        <h1> Submit your favorite song!</h1>
-        <form>
-            <div class="form-group">
-              <label for="formGroupExampleInput"></label>
-              <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Song Name">
-            </div>
-            <div class="form-group">
-              <label for="formGroupExampleInput2"></label>
-              <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Artist Name">
-            </div>
-            <div class="form-group">
-                <label for="formGroupExampleInput2"></label>
-                <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Ex: 1/10">
-              </div>
+<div id="card">
+    <h1> Submit your favorite song!</h1>
+    <hr>
+        <form method="POST" action="/songs">
+            <label for="songName"> Song Name </label>
+            <input type="text" name="songName" id="songName" />
+            <label for="artistName"> Artist Name </label>
+            <input type="text" name="artistName" id="artistName" />
+            <label for="releaseDay"> Release Day </label>
+            <input type="text" name="releaseDay" id="releaseDay" />
+            <label for="rating"> Rating </label>
+            <input type="text" name="rating" id="rating" />
+            
+            <input type="submit" value="Submit New Music!">
           </form>
-</div>
+</div> 
+
 
 
     <!--[if lt IE 7]>
